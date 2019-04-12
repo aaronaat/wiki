@@ -5,6 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Subscription } from 'rxjs';
 import { DocumentSnapshot } from '@firebase/firestore-types';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -18,7 +19,6 @@ export class HomeComponent implements OnInit {
   content: string;
   created: number;
   modified: number;
-
   subs: Subscription;
 
 
@@ -47,7 +47,7 @@ export class HomeComponent implements OnInit {
     this.subs = doc.subscribe((snapshot) => {
       const page = snapshot.data();
       if (!page) {
-        this.content = '### This page does not exist';
+        this.content = `Visit a page that exists or create one!`;
         this.slug = undefined;
       } else {
         this.slug = slug;
