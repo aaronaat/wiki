@@ -4,7 +4,11 @@ import { OktaCallbackComponent } from '@okta/okta-angular';
 import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: '/home', pathMatch: 'full'},
+  {path: '', redirectTo: '/home/', pathMatch: 'full'},
+  {
+    path: 'home/:slug',
+    component: HomeComponent
+  },
   {
     path: 'home',
     component: HomeComponent
@@ -14,6 +18,7 @@ const routes: Routes = [
     component: OktaCallbackComponent
   }
 ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

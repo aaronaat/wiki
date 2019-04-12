@@ -26,6 +26,8 @@ const config = {
     HomeComponent
   ],
   imports: [
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFirestoreModule,
     FormsModule,
     ReactiveFormsModule,
     BrowserModule,
