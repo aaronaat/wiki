@@ -7,11 +7,12 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { OktaAuthModule } from '@okta/okta-angular';
 import { AuthInterceptor } from './shared/okta/auth.interceptor';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { MarkdownModule } from 'ngx-markdown';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 import { firebaseConfig } from './api-keys';
+
 
 const config = {
   issuer: 'https://dev-356571.okta.com/',
