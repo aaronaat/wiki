@@ -5,11 +5,6 @@
       <button class="button" [routerLink]="['/edit', slug]">Edit</button>
       <button class="button" routerLink="/edit">Create</button>
     </div>
-    <ul>
-      <li *ngFor="let page of pages | async">
-        {{ page.name }}
-      </li>
-    </ul>
     <markdown [data]="content"></markdown>
   </div>
 </div>
