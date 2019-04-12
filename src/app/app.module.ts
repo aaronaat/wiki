@@ -12,6 +12,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 import { firebaseConfig } from './api-keys';
+import { EditComponent } from './edit/edit.component';
 
 
 const config = {
@@ -24,9 +25,11 @@ const config = {
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    EditComponent
   ],
   imports: [
+    MarkdownModule.forRoot(),
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFirestoreModule,
     FormsModule,
