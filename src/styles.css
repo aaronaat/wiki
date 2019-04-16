@@ -1,6 +1,7 @@
 body {
-    margin: 0;
-    font-family: sans-serif;
+    margin: 1px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color: lightsteelblue;
   }
   
   h1, h2 {

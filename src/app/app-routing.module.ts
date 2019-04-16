@@ -27,6 +27,10 @@ const routes: Routes = [
     path: 'edit',
     component: EditComponent,
     canActivate: [OktaAuthGuard]
+  },
+  {
+    path: 'articles',
+    component: ArticlesComponent
   }
 
 ];

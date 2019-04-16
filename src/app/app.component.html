@@ -3,6 +3,7 @@
       <button routerLink="/">{{title}}</button>
     </div>
     <div class="top-bar-right">
+      <button class="" routerLink="/articles">Articles</button>
       <button class="button" *ngIf="!isAuthenticated" (click)="oktaAuth.loginRedirect()"> Login </button>
       <button class="button" *ngIf="isAuthenticated" (click)="oktaAuth.logout()"> Logout </button>
     </div>
