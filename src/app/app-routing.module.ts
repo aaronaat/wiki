@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { OktaCallbackComponent, OktaAuthGuard } from '@okta/okta-angular';
 import { HomeComponent } from './home/home.component';
 import { EditComponent } from './edit/edit.component';
+import { ArticlesComponent } from './articles/articles.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/home/', pathMatch: 'full'},

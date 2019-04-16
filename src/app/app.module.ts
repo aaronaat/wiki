@@ -14,7 +14,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { firebaseConfig } from './api-keys';
 import { EditComponent } from './edit/edit.component';
 import { ArticlesComponent } from './articles/articles.component';
-
+import { ArticlesService } from './shared/articles.service';
 
 const config = {
   issuer: 'https://dev-356571.okta.com/',
@@ -41,7 +41,7 @@ const config = {
     HttpClientModule,
     OktaAuthModule.initAuth(config)
   ],
-  providers: [{provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}],
+  providers: [{provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true},ArticlesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

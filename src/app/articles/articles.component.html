@@ -1,3 +1,6 @@
-<p>
-  articles works!
-</p>
+<tbody class="a">
+  <tr>Articles</tr>
+<tr *ngFor="let article of articles">
+    <td><a href="/home/{{ article.payload.doc.id }}">{{ article.payload.doc.id }}</a></td>
+</tr>
+</tbody>
