@@ -13,12 +13,13 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 import { firebaseConfig } from './api-keys';
 import { EditComponent } from './edit/edit.component';
+import { ArticlesComponent } from './articles/articles.component';
 
 
 const config = {
   issuer: 'https://dev-356571.okta.com/',
-  redirectUri: window.location.origin + '/implicit/callback',
-  clientId: '0oagu5flq6m0xGmih356'
+  redirectUri: 'https://wiki-693b2.firebaseapp.com/implicit/callback',
+  clientId: '0oagxnlysDWOVhpPp356'
 };
 
 
@@ -26,7 +27,8 @@ const config = {
   declarations: [
     AppComponent,
     HomeComponent,
-    EditComponent
+    EditComponent,
+    ArticlesComponent
   ],
   imports: [
     MarkdownModule.forRoot(),
